@@ -12,7 +12,7 @@
 <meta name="twitter:image" content="https://ekpix.in/images/og-image.jpg">
   <meta name="description" content="EKPIX creates premium business websites, portfolio websites, eCommerce websites, landing pages and SEO-friendly web solutions in India.">
 
-<meta name="keywords" content="EKPIX, Web Design, Website Development, Portfolio Website, Business Website, Responsive Website, UI UX Design, SEO">
+<meta name="keywords" content="EKPIX , Web Design, Website Development, Portfolio Website, Business Website, Responsive Website, UI UX Design, SEO">
 
 <meta name="robots" content="index, follow">
 
@@ -399,6 +399,27 @@ section{ padding:100px 0; position:relative; }
 }
 @media (max-width:640px){ .mockup-body{ height:340px; padding:18px; } }
 
+/* When a slide provides a real image, the body switches to an
+   aspect-ratio box instead of the fixed-height block layout above,
+   so the image scales fluidly on any screen size. */
+.mockup-body.has-image{
+  height:auto;
+  aspect-ratio:16/10;
+  padding:0;
+  display:block;
+  overflow:hidden;
+}
+@media (max-width:640px){
+  .mockup-body.has-image{ aspect-ratio:4/3; }
+}
+.mockup-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
 .blk{ border-radius:4px; }
 
 .gallery-caption{
@@ -422,6 +443,33 @@ section{ padding:100px 0; position:relative; }
   margin-top:6px;
   display:block;
 }
+.gallery-caption .cap-desc{
+  font-family:var(--font-body);
+  font-size:14.5px;
+  line-height:1.6;
+  color:var(--muted);
+  max-width:480px;
+  margin-top:12px;
+  display:none;
+}
+.gallery-caption .cap-desc.show{ display:block; }
+.view-site-btn{
+  font-family:var(--font-mono);
+  font-size:13px;
+  letter-spacing:0.03em;
+  padding:12px 22px;
+  margin-top:18px;
+  background:transparent;
+  color:var(--paper);
+  border:1px solid var(--line);
+  border-radius:2px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:all .2s ease;
+}
+.view-site-btn:hover{ background:var(--grad); border-color:transparent; transform:translateY(-1px); }
+.view-site-btn svg{ width:14px;height:14px; }
 .gallery-controls{ display:flex; align-items:center; gap:14px; }
 .pix-btn{
   width:46px;height:46px;
@@ -944,6 +992,11 @@ EKPIX creates premium business websites, portfolio websites, eCommerce websites,
           <div>
             <span class="cap-title" id="capTitle"></span>
             <span class="cap-tag" id="capTag"></span>
+            <p class="cap-desc" id="capDesc"></p>
+            <a class="view-site-btn" id="viewSiteBtn" href="#" target="_blank" rel="noopener noreferrer">
+              View Website
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+            </a>
           </div>
           <div class="gallery-controls">
             <button class="pix-btn" id="prevBtn" aria-label="Previous concept">
@@ -1074,9 +1127,12 @@ EKPIX creates premium business websites, portfolio websites, eCommerce websites,
 // ---------------- Gallery: mockup "concept" slides ----------------
 const slides = [
   {
-    title: "Studio Portfolio",
-    tag: "Personal / Creative — dark hero grid",
-    url: "ekpix.studio/work/portfolio",
+    title: "EK Portfolio",
+    tag: "Personal portfolio",
+    desc: "I design and develop responsive websites using HTML, CSS, JavaScript, and modern web technologies. My portfolio highlights my skills, learning journey, and the work I've created to improve my development expertise.",
+    url: "ek-portfolio",
+    link: "https://ek-personal-portfolio.vercel.app/", // ← replace with the real live website URL for this project
+    image: "ek personal.png",
     build(el){
       el.style.background = "linear-gradient(180deg,#0F0F1C,#161628)";
       el.innerHTML = `
@@ -1090,9 +1146,12 @@ const slides = [
     }
   },
   {
-    title: "Corner Café",
-    tag: "Restaurant — warm, image-led layout",
-    url: "ekpix.studio/work/corner-cafe",
+    title: "EK CAFE",
+    tag: "Cafe website — warm, food-first layout",
+    desc: "A modern and responsive cafe website designed with a warm, elegant aesthetic. Features an interactive menu, gallery, customer reviews, contact form, and smooth animations for an engaging user experience.",
+    url: "ek-cafe",
+    link: "https://ek-cafe.vercel.app/", // ← replace with the real live website URL for this project
+    image: "ek cafe screenshot.png",
     build(el){
       el.style.background = "linear-gradient(180deg,#1F1710,#2A1D12)";
       el.innerHTML = `
@@ -1113,9 +1172,12 @@ const slides = [
     }
   },
   {
-    title: "Northline Fitness",
+    title: "EKGRIT HOUSE",
     tag: "Fitness landing page — bold and direct",
-    url: "ekpix.studio/work/northline",
+    desc: "A modern, high-performance fitness website designed for a strength and conditioning gym. Built with HTML, CSS, and JavaScript, featuring a bold UI, responsive layout, smooth navigation, and clear call-to-actions for an engaging user experience.",
+    url: "ekgrit-house",
+    link: "https://ekgrit-house.vercel.app/", // ← replace with the real live website URL for this project
+    image: "ek grit ss.png",
     build(el){
       el.style.background = "linear-gradient(180deg,#0A0A14,#1A1010)";
       el.innerHTML = `
@@ -1129,9 +1191,12 @@ const slides = [
     }
   },
   {
-    title: "Aperture",
+    title: "APERTURE",
     tag: "Photography portfolio — full-bleed grid",
-    url: "ekpix.studio/work/aperture",
+    desc: "A modern photography portfolio website designed for EKPIX Creative Web Studio. Built with HTML, CSS, and JavaScript, it features a cinematic full-screen hero, responsive gallery, smooth animations, and an elegant user interface that highlights professional photography.",
+    url: "aperture",
+    link: "https://aperture-tau-rust.vercel.app/", // ← replace with the real live website URL for this project
+    image: "aperture.png",
     build(el){
       el.style.background = "#0A0A0A";
       el.innerHTML = `
@@ -1144,9 +1209,12 @@ const slides = [
     }
   },
   {
-    title: "Ledger",
+    title: "LEDGER",
     tag: "SaaS product landing — dashboard preview",
-    url: "ekpix.studio/work/ledger",
+    desc: "A modern and responsive website designed to showcase services, projects, and business information with a clean and professional user interface. Built for an engaging user experience, it features smooth navigation, interactive elements, and a fully mobile-friendly design.",
+    url: "ledger",
+    link: "https://ledger-saas-silk.vercel.app/", // ← replace with the real live website URL for this project
+    image: "ledger.png",
     build(el){
       el.style.background = "linear-gradient(180deg,#0C0F1C,#111528)";
       el.innerHTML = `
@@ -1160,9 +1228,12 @@ const slides = [
     }
   },
   {
-    title: "Bloom Market",
+    title: "EKL Watches",
     tag: "E-commerce — product grid layout",
-    url: "ekpix.studio/work/bloom-market",
+    desc: "Designed and developed a premium luxury watch brand website that showcases the company's heritage, craftsmanship, manufacturing process, and core values. The website features a modern responsive layout, elegant typography, smooth navigation, and a refined user experience that reflects the identity of a high-end watch brand.",
+    url: "ekl-watches",
+    link: "https://ekl-watches.vercel.app/", // ← replace with the real live website URL for this project
+    image: "ekl watches.png",
     build(el){
       el.style.background = "linear-gradient(180deg,#101a12,#0e1610)";
       el.innerHTML = `
@@ -1181,6 +1252,8 @@ let current = 0;
 const mockupBody = document.getElementById('mockupBody');
 const capTitle = document.getElementById('capTitle');
 const capTag = document.getElementById('capTag');
+const capDesc = document.getElementById('capDesc');
+const viewSiteBtn = document.getElementById('viewSiteBtn');
 const urlbar = document.getElementById('urlbar');
 const dotsEl = document.getElementById('dots');
 
@@ -1202,13 +1275,51 @@ function show(i){
   setTimeout(()=>{
     mockupBody.removeAttribute('style');
     mockupBody.style.transition = 'opacity .35s ease';
-    s.build(mockupBody);
+    mockupBody.classList.remove('has-image');
+
+    if (s.image) {
+      // Real image: responsive box (aspect-ratio + object-fit:cover)
+      // scales cleanly on phones, tablets, and desktops.
+      mockupBody.classList.add('has-image');
+      mockupBody.innerHTML = `<img
+        class="mockup-img"
+        src="${s.image}"
+        alt="${s.title} — ${s.tag}"
+        loading="lazy"
+        decoding="async"
+        onerror="this.closest('.mockup-body').classList.remove('has-image'); slides[current].build(this.closest('.mockup-body'));">`;
+    } else {
+      // No image supplied yet: fall back to the CSS block mockup.
+      s.build(mockupBody);
+    }
+
     mockupBody.style.opacity = 0;
     requestAnimationFrame(()=>{ mockupBody.style.opacity = 1; });
   }, 160);
   capTitle.textContent = s.title;
   capTag.textContent = s.tag;
   urlbar.textContent = s.url;
+
+  // Description shown alongside the project (fill in "desc" per slide below)
+  if (s.desc) {
+    capDesc.textContent = s.desc;
+    capDesc.classList.add('show');
+  } else {
+    capDesc.textContent = '';
+    capDesc.classList.remove('show');
+  }
+
+  // "View Website" button: goes to the real, live site for this project.
+  // Uses "link" if you set one, otherwise falls back to "url".
+  const target = s.link || s.url;
+  if (target) {
+    viewSiteBtn.href = /^https?:\/\//i.test(target) ? target : ('https://' + target);
+    viewSiteBtn.style.display = 'inline-flex';
+  } else {
+    viewSiteBtn.removeAttribute('href');
+    viewSiteBtn.style.display = 'none';
+  }
+
   renderDots();
 }
 
