@@ -404,10 +404,13 @@ section{ padding:100px 0; position:relative; }
    so the image scales fluidly on any screen size. */
 .mockup-body.has-image{
   height:auto;
-  aspect-ratio:16/10;
+    aspect-ratio: 21/9; /* closer to your actual screenshot's proportions */
   padding:0;
-  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   overflow:hidden;
+  background:#0A0A14; /* fills empty space instead of stretching/cropping */
 }
 @media (max-width:640px){
   .mockup-body.has-image{ aspect-ratio:4/3; }
@@ -415,11 +418,10 @@ section{ padding:100px 0; position:relative; }
 .mockup-img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:contain;      /* was: cover */
   object-position:center;
   display:block;
 }
-
 .blk{ border-radius:4px; }
 
 .gallery-caption{
