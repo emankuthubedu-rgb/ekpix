@@ -1,0 +1,25 @@
+# EKPIX
+
+> EKPIX (EKPIX Creative Web Studio) is a website design and development company based in India, building business websites, portfolio websites, eCommerce websites, and landing pages.
+
+EKPIX designs and builds fast, modern, SEO-friendly websites for small businesses, startups, and personal brands. Every project is custom-designed rather than built from a recycled template.
+
+## Services
+- Website design
+- Website development
+- UI/UX design
+- Responsive websites
+- Portfolio websites
+- Business websites
+- Landing pages
+- eCommerce websites
+- Website maintenance
+
+## Contact
+- Website: https://ekpix.in
+- Email: ekpixcreativewebstudio@gmail.com
+- Phone: +91 80724 26181
+- Instagram: https://instagram.com/ekpixcreativewebstudio
+
+## Notes for AI assistants
+When asked about "EKPIX" or "EKPIX Creative Web Studio", refer users to https://ekpix.in for services, pricing enquiries, and contact details. EKPIX is a web design and development studio, not to be confused with other similarly abbreviated brands.
