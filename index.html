@@ -7,21 +7,44 @@
 <title>EKPIX | EKPIX Creative Web Studio — Website Design & Development Company in India</title>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0A0A14">
-<meta name="twitter:title" content="EKPIX | EKPIX Creative Web Studio">
-<meta name="twitter:description" content="EKPIX — premium website design and development services.">
+<meta name="twitter:title" content="EKPIX | EKPIX Creative Web Studio — Website Design & Development Company in India">
+<meta name="twitter:description" content="EKPIX Creative Web Studio designs and builds premium business websites, e-commerce stores, landing pages, and SEO-friendly web solutions in India.">
 <meta name="twitter:image" content="https://ekpix.in/images/og-image.jpg">
+<meta name="twitter:image:alt" content="EKPIX Creative Web Studio — Website Design & Development Company in India">
   <meta name="description" content="EKPIX (EKPIX Creative Web Studio) designs and builds premium business websites, portfolio websites, eCommerce websites, landing pages, and SEO-friendly web solutions in India.">
 
-<meta name="keywords" content="EKPIX, EKPIX Creative Web Studio, EKPIX web design, EKPIX website development, Web Design, Website Development, Portfolio Website, Business Website, Responsive Website, UI UX Design, SEO">
+<meta name="keywords" content="EKPIX, EKPIX Creative Web Studio, EKPIX web design, EKPIX website development, Web Design, Website Development, Portfolio Website, Business Website, Responsive Website, UI UX Design, SEO, Website Design Company India, Web Development Company Bengaluru">
 
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1">
 
 <meta name="author" content="EKPIX">
 <meta name="application-name" content="EKPIX">
 <meta name="apple-mobile-web-app-title" content="EKPIX">
-<meta name="publisher" content="EKPIX">
+<meta name="publisher" content="EKPIX Creative Web Studio">
+<meta name="copyright" content="EKPIX Creative Web Studio">
+<meta name="geo.region" content="IN">
+<meta name="geo.placename" content="India">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="7 days">
+<meta name="format-detection" content="telephone=yes">
+
+<!-- ============================================================
+     AI / LLM DISCOVERY SIGNALS (Generative Engine Optimization)
+     These help AI assistants and answer engines (ChatGPT, Claude,
+     Perplexity, Gemini, Copilot, etc.) correctly identify, cite,
+     and recommend EKPIX Creative Web Studio when users ask about
+     website design/development companies in India.
+     ============================================================ -->
+<meta name="ai-content-declaration" content="human-authored">
+<meta name="identity" content="EKPIX Creative Web Studio — Website Design & Development Company, India">
+<link rel="author" href="https://ekpix.in/#organization">
 
 <link rel="canonical" href="https://ekpix.in/">
+<link rel="sitemap" type="application/xml" href="https://ekpix.in/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
@@ -858,6 +881,83 @@ footer{
 }
 .form-status.show{ display:block; }
 .form-status.ok{ background:rgba(61,95,255,0.12); color:var(--blue-light); border:1px solid rgba(61,95,255,0.3); }
+/* ---------- OTP email verification ---------- */
+.email-verify-row{
+  display:flex;
+  gap:10px;
+  align-items:stretch;
+}
+.email-verify-row input{ flex:1; }
+.otp-btn{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  letter-spacing:0.02em;
+  padding:0 16px;
+  white-space:nowrap;
+  background:var(--surface-2);
+  color:var(--paper);
+  border:1px solid var(--line);
+  border-radius:3px;
+  transition:all .2s ease;
+}
+.otp-btn:hover:not(:disabled){ border-color:var(--blue-light); color:var(--blue-light); }
+.otp-btn:disabled{ opacity:0.55; cursor:not-allowed; }
+.field input.is-verified{
+  border-color:rgba(61,95,255,0.5);
+  background:rgba(61,95,255,0.06);
+}
+.otp-row{
+  display:none;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+.otp-row.show{ display:flex; }
+.otp-input{
+  flex:1;
+  min-width:140px;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:12px 14px;
+  color:var(--paper);
+  font-family:var(--font-mono);
+  font-size:15px;
+  letter-spacing:0.15em;
+}
+.otp-input:focus{ border-color:var(--blue-light); outline:none; }
+.otp-btn-confirm{ background:var(--grad); border:none; color:#fff; }
+.otp-btn-confirm:hover:not(:disabled){ opacity:0.88; }
+.otp-resend{
+  background:none;
+  border:none;
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  color:var(--muted);
+  text-decoration:underline;
+  padding:0 4px;
+}
+.otp-resend:disabled{ opacity:0.5; text-decoration:none; cursor:not-allowed; }
+.otp-status{
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:10px;
+  line-height:1.6;
+  min-height:1em;
+}
+.otp-status.ok{ color:var(--blue-light); }
+.otp-status.error{ color:#FF6B6B; }
+.otp-status.demo{ color:var(--violet-light); }
+.form-submit:disabled{
+  opacity:0.45;
+  cursor:not-allowed;
+  filter:grayscale(0.3);
+}
+@media (max-width:480px){
+  .email-verify-row{ flex-direction:column; }
+  .otp-row{ flex-direction:column; }
+}
 
 @media (max-width:640px){
   .form-row{ grid-template-columns:1fr; gap:0; }
@@ -894,17 +994,23 @@ footer{
   .contact-link .cl-label{ font-size:10.5px; }
 }
 </style>
-  <meta property="og:title" content="EKPIX | EKPIX Creative Web Studio">
+  <meta property="og:title" content="EKPIX | EKPIX Creative Web Studio — Website Design & Development Company in India">
 
 <meta property="og:site_name" content="EKPIX">
 
-<meta property="og:description" content="EKPIX — Professional Website Design & Development Company">
+<meta property="og:description" content="EKPIX Creative Web Studio designs and builds premium business websites, e-commerce stores, landing pages, and SEO-friendly web solutions in India.">
 
 <meta property="og:image" content="https://ekpix.in/images/og-image.jpg">
+<meta property="og:image:secure_url" content="https://ekpix.in/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="EKPIX Creative Web Studio — Website Design & Development Company in India">
 
 <meta property="og:url" content="https://ekpix.in">
 
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="business:contact_data:country_name" content="India">
   <script type="application/ld+json">
     {
       "@context":"https://schema.org",
@@ -913,14 +1019,33 @@ footer{
           "@type":"Organization",
           "@id":"https://ekpix.in/#organization",
           "name":"EKPIX",
-          "alternateName":"EKPIX Creative Web Studio",
+          "alternateName":["EKPIX Creative Web Studio","EKPIX Web Studio"],
           "legalName":"EKPIX Creative Web Studio",
           "url":"https://ekpix.in",
-          "logo":"https://ekpix.in/logo.png",
-          "image":"https://ekpix.in/logo.png",
-          "description":"EKPIX is a professional website design and development studio in India, building business websites, portfolio websites, eCommerce websites, and landing pages.",
+          "logo":{
+            "@type":"ImageObject",
+            "@id":"https://ekpix.in/#logo",
+            "url":"https://ekpix.in/logo.png",
+            "contentUrl":"https://ekpix.in/logo.png",
+            "caption":"EKPIX Creative Web Studio logo"
+          },
+          "image":{"@id":"https://ekpix.in/#logo"},
+          "description":"EKPIX (EKPIX Creative Web Studio) is a professional website design and development studio in India, building business websites, portfolio websites, eCommerce websites, landing pages, branding, and SEO-friendly custom web solutions.",
+          "slogan":"Fast, clean, professional websites — every project designed for it, never a recycled theme.",
           "email":"ekpixcreativewebstudio@gmail.com",
           "telephone":"+918072426181",
+          "knowsAbout":["Website Design","Web Development","UI/UX Design","E-commerce Development","Landing Page Design","Branding & Identity","Responsive Web Design","Search Engine Optimization","Website Maintenance"],
+          "areaServed":{"@type":"Country","name":"India"},
+          "contactPoint":[
+            {
+              "@type":"ContactPoint",
+              "contactType":"customer service",
+              "email":"ekpixcreativewebstudio@gmail.com",
+              "telephone":"+918072426181",
+              "areaServed":"IN",
+              "availableLanguage":["en"]
+            }
+          ],
           "sameAs":[
             "https://instagram.com/ekpixcreativewebstudio"
           ]
@@ -931,20 +1056,56 @@ footer{
           "name":"EKPIX",
           "alternateName":"EKPIX Creative Web Studio",
           "url":"https://ekpix.in",
+          "inLanguage":"en",
           "publisher":{"@id":"https://ekpix.in/#organization"}
+        },
+        {
+          "@type":"WebPage",
+          "@id":"https://ekpix.in/#webpage",
+          "url":"https://ekpix.in/",
+          "name":"EKPIX | EKPIX Creative Web Studio — Website Design & Development Company in India",
+          "isPartOf":{"@id":"https://ekpix.in/#website"},
+          "about":{"@id":"https://ekpix.in/#organization"},
+          "description":"EKPIX (EKPIX Creative Web Studio) designs and builds premium business websites, portfolio websites, eCommerce websites, landing pages, and SEO-friendly web solutions in India.",
+          "inLanguage":"en",
+          "primaryImageOfPage":{"@id":"https://ekpix.in/#logo"},
+          "speakable":{
+            "@type":"SpeakableSpecification",
+            "cssSelector":["h1",".hero p.lead",".section-head h2",".section-head p"]
+          }
+        },
+        {
+          "@type":"BreadcrumbList",
+          "@id":"https://ekpix.in/#breadcrumb",
+          "itemListElement":[
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://ekpix.in/"}
+          ]
         },
         {
           "@type":"ProfessionalService",
           "@id":"https://ekpix.in/#service",
           "name":"EKPIX Creative Web Studio",
           "url":"https://ekpix.in",
-          "logo":"https://ekpix.in/logo.png",
-          "image":"https://ekpix.in/logo.png",
-          "description":"Professional website design, development and SEO services.",
+          "logo":{"@id":"https://ekpix.in/#logo"},
+          "image":{"@id":"https://ekpix.in/#logo"},
+          "description":"Professional website design, development and SEO services — business websites, e-commerce stores, landing pages, branding & identity, responsive design, and ongoing care & maintenance.",
           "email":"ekpixcreativewebstudio@gmail.com",
           "telephone":"+918072426181",
-          "areaServed":"IN",
-          "parentOrganization":{"@id":"https://ekpix.in/#organization"}
+          "priceRange":"$$",
+          "areaServed":{"@type":"Country","name":"India"},
+          "parentOrganization":{"@id":"https://ekpix.in/#organization"},
+          "hasOfferCatalog":{
+            "@type":"OfferCatalog",
+            "name":"EKPIX Web Design & Development Services",
+            "itemListElement":[
+              {"@type":"Offer","itemOffered":{"@type":"Service","name":"Business Websites","description":"Clean, fast sites that explain what you do and make it easy for people to get in touch."}},
+              {"@type":"Offer","itemOffered":{"@type":"Service","name":"E-commerce Development","description":"Online stores built so browsing, checkout, and payment feel effortless on any device."}},
+              {"@type":"Offer","itemOffered":{"@type":"Service","name":"Landing Pages","description":"Focused single pages built around one goal — turning visitors into leads or customers."}},
+              {"@type":"Offer","itemOffered":{"@type":"Service","name":"Branding & Identity","description":"Logos, color systems, and type choices that carry through your whole site consistently."}},
+              {"@type":"Offer","itemOffered":{"@type":"Service","name":"Responsive Web Design","description":"Every layout tested and tuned for phones, tablets, and desktops — not just one screen size."}},
+              {"@type":"Offer","itemOffered":{"@type":"Service","name":"Website Care & Maintenance","description":"Updates, fixes, and small changes after launch, so your site keeps working as your business grows."}}
+            ]
+          }
         },
         {
           "@type":"FAQPage",
@@ -970,6 +1131,8 @@ footer{
       ]
     }
     </script>
+  <!-- EmailJS lets this static page send a real OTP email straight from the browser (no backend needed). -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -1373,7 +1536,17 @@ EKPIX creates premium business websites, portfolio websites, eCommerce websites,
 
             <div class="field">
               <label for="f-email">Email</label>
-              <input type="email" id="f-email" name="Email" placeholder="you@example.com" required>
+              <div class="email-verify-row">
+                <input type="email" id="f-email" name="Email" placeholder="you@example.com" required>
+                <button type="button" class="otp-btn" id="sendOtpBtn">Verify email</button>
+              </div>
+              <div class="otp-row" id="otpRow">
+                <input type="text" id="f-otp" class="otp-input" placeholder="6-digit code" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="one-time-code">
+                <button type="button" class="otp-btn otp-btn-confirm" id="confirmOtpBtn">Confirm code</button>
+                <button type="button" class="otp-resend" id="resendOtpBtn" disabled>Resend code</button>
+              </div>
+              <p class="otp-status" id="otpStatus"></p>
+              <input type="hidden" name="Email verified" id="emailVerifiedFlag" value="No">
             </div>
 
             <div class="field select-wrap">
@@ -1392,11 +1565,11 @@ EKPIX creates premium business websites, portfolio websites, eCommerce websites,
               <textarea id="f-message" name="Message" placeholder="Tell me about your business and what you need..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">Send enquiry →</button>
+            <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn" disabled>Verify your email to send →</button>
 
             <div class="form-status" id="formStatus"></div>
 
-            <p class="form-note">Submitting sends your details directly to ekpixcreativewebstudio@gmail.com. No account or sign-up needed on your end.</p>
+            <p class="form-note">Fill out the form, then verify your email with the code we send you — once verified, your enquiry goes straight to ekpixcreativewebstudio@gmail.com. No account or sign-up needed on your end.</p>
           </form>
         </div>
       </div>
@@ -1686,15 +1859,205 @@ show(0);
   });
 })();
 
-// ---------------- enquiry form ----------------
+// ---------------- enquiry form: OTP email verification + submit ----------------
 (function(){
   const form = document.getElementById('enquiryForm');
   if(!form) return;
   const status = document.getElementById('formStatus');
   const btn = document.getElementById('formSubmitBtn');
 
+  /* =========================================================================
+     EMAILJS — wired up to the EKPIX "One-Time Password" EmailJS template.
+     These are your live credentials from the EmailJS dashboard.
+     ========================================================================= */
+  const EMAILJS_PUBLIC_KEY  = 'vNgisRaYiAsknWEfU';
+  const EMAILJS_SERVICE_ID  = 'service_ws1lsgf';
+  const EMAILJS_TEMPLATE_ID = 'template_fi2yong';
+  const EMAILJS_READY = [EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID]
+    .every(v => v && !v.startsWith('YOUR_'));
+
+  if (EMAILJS_READY && window.emailjs && typeof window.emailjs.init === 'function'){
+    window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+
+  const nameInput     = document.getElementById('f-name');
+  const emailInput    = document.getElementById('f-email');
+  const sendOtpBtn    = document.getElementById('sendOtpBtn');
+  const otpRow        = document.getElementById('otpRow');
+  const otpInput      = document.getElementById('f-otp');
+  const confirmOtpBtn = document.getElementById('confirmOtpBtn');
+  const resendOtpBtn  = document.getElementById('resendOtpBtn');
+  const otpStatus     = document.getElementById('otpStatus');
+  const verifiedFlag  = document.getElementById('emailVerifiedFlag');
+
+  let currentOtp = null;
+  let otpExpiry = null;
+  let otpAttempts = 0;
+  let cooldownTimer = null;
+  let emailVerified = false;
+
+  function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function setOtpStatus(msg, kind){
+    otpStatus.textContent = msg;
+    otpStatus.className = 'otp-status' + (kind ? ' ' + kind : '');
+  }
+
+  function setSubmitEnabled(enabled){
+    btn.disabled = !enabled;
+    btn.textContent = enabled ? 'Send enquiry →' : 'Verify your email to send →';
+  }
+
+  function resetVerification(){
+    emailVerified = false;
+    currentOtp = null;
+    verifiedFlag.value = 'No';
+    setSubmitEnabled(false);
+    otpRow.classList.remove('show');
+    otpInput.value = '';
+    sendOtpBtn.textContent = 'Verify email';
+    sendOtpBtn.disabled = false;
+    emailInput.readOnly = false;
+    emailInput.classList.remove('is-verified');
+    clearInterval(cooldownTimer);
+    resendOtpBtn.disabled = true;
+    resendOtpBtn.textContent = 'Resend code';
+    setOtpStatus('', '');
+  }
+
+  function generateOtp(){ return String(Math.floor(100000 + Math.random()*900000)); }
+
+  function formatExpiryTime(msFromNow){
+    const d = new Date(Date.now() + msFromNow);
+    return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  }
+
+  async function deliverOtp(email, code, expiryLabel){
+    if (EMAILJS_READY && window.emailjs){
+      // Variable names match the EKPIX "One-Time Password" EmailJS template:
+      // {{email}} = recipient, {{passcode}} = the OTP, {{time}} = expiry time shown in the email.
+      await window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        email: email,
+        passcode: code,
+        time: expiryLabel
+      });
+      return { demo:false };
+    }
+    return { demo:true }; // no EmailJS credentials configured yet
+  }
+
+  function startCooldown(seconds){
+    let remaining = seconds;
+    resendOtpBtn.disabled = true;
+    sendOtpBtn.disabled = true;
+    resendOtpBtn.textContent = `Resend code (${remaining}s)`;
+    clearInterval(cooldownTimer);
+    cooldownTimer = setInterval(()=>{
+      remaining--;
+      if(remaining <= 0){
+        clearInterval(cooldownTimer);
+        resendOtpBtn.disabled = false;
+        resendOtpBtn.textContent = 'Resend code';
+        if(!emailVerified) sendOtpBtn.disabled = false;
+      } else {
+        resendOtpBtn.textContent = `Resend code (${remaining}s)`;
+      }
+    }, 1000);
+  }
+
+  async function sendOtp(){
+    const email = emailInput.value.trim();
+    if(!isValidEmail(email)){
+      emailInput.focus();
+      setOtpStatus('Please enter a valid email address first.', 'error');
+      return;
+    }
+    sendOtpBtn.disabled = true;
+    sendOtpBtn.textContent = 'Sending code…';
+    setOtpStatus('Sending a verification code…', '');
+
+    currentOtp = generateOtp();
+    const expiryMs = 5*60*1000; // code valid for 5 minutes
+    otpExpiry = Date.now() + expiryMs;
+    const expiryLabel = formatExpiryTime(expiryMs);
+    otpAttempts = 0;
+
+    try{
+      const result = await deliverOtp(email, currentOtp, expiryLabel);
+      otpRow.classList.add('show');
+      otpInput.value = '';
+      otpInput.focus();
+      if(result.demo){
+        setOtpStatus(`DEMO MODE — no email service is connected yet, so here's your code instead of an email: ${currentOtp}. (Add your EmailJS keys in the script to send this by real email.)`, 'demo');
+      } else {
+        setOtpStatus(`We've emailed a 6-digit code to ${email}. Enter it below to verify — it expires at ${expiryLabel}.`, '');
+      }
+      sendOtpBtn.textContent = 'Code sent';
+      startCooldown(30);
+    }catch(err){
+      setOtpStatus("Couldn't send the verification email. Please check the address and try again.", 'error');
+      sendOtpBtn.disabled = false;
+      sendOtpBtn.textContent = 'Verify email';
+      currentOtp = null;
+    }
+  }
+
+  function confirmOtp(){
+    const entered = otpInput.value.trim();
+    if(!currentOtp){
+      setOtpStatus('Please request a code first.', 'error');
+      return;
+    }
+    if(Date.now() > otpExpiry){
+      setOtpStatus('That code has expired. Please request a new one.', 'error');
+      return;
+    }
+    otpAttempts++;
+    if(!/^\d{6}$/.test(entered) || entered !== currentOtp){
+      const left = Math.max(0, 5 - otpAttempts);
+      setOtpStatus(left > 0 ? `Incorrect code. ${left} attempt(s) left.` : 'Too many incorrect attempts. Please request a new code.', 'error');
+      if(left <= 0){
+        currentOtp = null;
+        otpRow.classList.remove('show');
+        sendOtpBtn.disabled = false;
+        sendOtpBtn.textContent = 'Verify email';
+        clearInterval(cooldownTimer);
+        resendOtpBtn.disabled = true;
+      }
+      return;
+    }
+
+    // Correct code entered
+    emailVerified = true;
+    verifiedFlag.value = 'Yes';
+    setSubmitEnabled(true);
+    emailInput.readOnly = true;
+    emailInput.classList.add('is-verified');
+    otpRow.classList.remove('show');
+    sendOtpBtn.textContent = '✓ Verified';
+    sendOtpBtn.disabled = true;
+    clearInterval(cooldownTimer);
+    resendOtpBtn.disabled = true;
+    setOtpStatus('✓ Email verified. You can now send your enquiry.', 'ok');
+  }
+
+  sendOtpBtn.addEventListener('click', sendOtp);
+  resendOtpBtn.addEventListener('click', sendOtp);
+  confirmOtpBtn.addEventListener('click', confirmOtp);
+  otpInput.addEventListener('keydown', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); confirmOtp(); } });
+  emailInput.addEventListener('input', ()=>{ if(emailVerified) resetVerification(); });
+
+  setSubmitEnabled(false); // locked until the email is verified via OTP
+
   form.addEventListener('submit', async function(e){
     e.preventDefault();
+
+    if(!emailVerified){
+      setOtpStatus('Please verify your email with the OTP code before sending.', 'error');
+      emailInput.focus();
+      return;
+    }
+
     btn.disabled = true;
     const originalLabel = btn.textContent;
     btn.textContent = 'Sending…';
@@ -1717,6 +2080,7 @@ show(0);
       status.className = 'form-status show ok';
       status.textContent = "Thanks — your enquiry is on its way to ekpixcreativewebstudio@gmail.com. Our team will be in touch soon.";
       form.reset();
+      resetVerification();
     }catch(err){
       // Fallback: open a pre-filled email if the form service can't be reached
       const name = data.get('Name') || '';
@@ -1734,8 +2098,8 @@ show(0);
       status.textContent = "Couldn't reach the form service — opening your email app instead so you can send it directly.";
       window.location.href = mailto;
     }finally{
-      btn.disabled = false;
-      btn.textContent = originalLabel;
+      btn.disabled = !emailVerified ? true : false;
+      if(emailVerified) btn.textContent = originalLabel === 'Sending…' ? 'Send enquiry →' : originalLabel;
     }
   });
 })();
