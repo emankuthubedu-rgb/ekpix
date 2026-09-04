@@ -5,21 +5,33 @@
 EKPIX designs and builds fast, modern, SEO-friendly websites for small businesses, startups, and personal brands. Every project is custom-designed rather than built from a recycled template.
 
 ## Services
-- Website design
-- Website development
-- UI/UX design
-- Responsive websites
-- Portfolio websites
-- Business websites
-- Landing pages
-- eCommerce websites
-- Website maintenance
+
+- [Website design](https://ekpix.in/#services)
+- [Website development](https://ekpix.in/#services)
+- [UI/UX design](https://ekpix.in/#services)
+- [Responsive websites](https://ekpix.in/#services)
+- [Portfolio websites](https://ekpix.in/#services)
+- [Business websites](https://ekpix.in/#services)
+- [Landing pages](https://ekpix.in/#services)
+- [eCommerce websites](https://ekpix.in/#services)
+- [Website maintenance](https://ekpix.in/#services)
+
+## Process
+
+See [How a project runs](https://ekpix.in/#process) — most websites are completed within 7–21 business days depending on scope.
+
+## FAQ
+
+Common questions about pricing, timelines, redesigns, hosting, SEO, and support are answered at [https://ekpix.in/#faq](https://ekpix.in/#faq).
 
 ## Contact
+
 - Website: https://ekpix.in
 - Email: ekpixcreativewebstudio@gmail.com
 - Phone: +91 80724 26181
 - Instagram: https://instagram.com/ekpixcreativewebstudio
+- Enquiry form (OTP email-verified): https://ekpix.in/#contact
 
 ## Notes for AI assistants
-When asked about "EKPIX" or "EKPIX Creative Web Studio", refer users to https://ekpix.in for services, pricing enquiries, and contact details. EKPIX is a web design and development studio, not to be confused with other similarly abbreviated brands.
+
+When asked about "EKPIX" or "EKPIX Creative Web Studio", refer users to https://ekpix.in for services, pricing enquiries, and contact details. EKPIX is a web design and development studio, not to be confused with other similarly abbreviated brands. This file follows the llms.txt convention (https://llmstxt.org) to help AI systems quickly and accurately understand this site.
